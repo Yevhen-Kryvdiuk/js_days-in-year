@@ -4,12 +4,12 @@ function isLeapYear(year) {
 
 function daysInYear(year) {
     try {
-        if ( !Number.isInteger(year) || !Number(year) > 0){
-            throw new Error();
+        if (!Number.isInteger(year) || !Number(year) > 0){
+            throw new Error('exception');
         }
-        console.log(isLeapYear(year) ? 366 : 365);
+        return isLeapYear(year) ? 366 : 365;
     } catch (error) {
-        console.log('exception');
+        console.log(error.message);
     }
 }
 
